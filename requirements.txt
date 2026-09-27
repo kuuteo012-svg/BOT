@@ -1,0 +1,36 @@
+# ═══════════════════════════════════════════════════════════════
+# Telegram client
+# ═══════════════════════════════════════════════════════════════
+telethon==1.35.0
+cryptg>=0.4.0                  # Tăng tốc AES-IGE MTProto → download/upload nhanh 5–10×
+
+# ═══════════════════════════════════════════════════════════════
+# Config & tiện ích
+# ═══════════════════════════════════════════════════════════════
+python-dotenv==1.0.1
+tzdata>=2024.1
+psutil>=6.0.0
+rich>=13.0.0
+
+# ═══════════════════════════════════════════════════════════════
+# OCR + xử lý ảnh/video
+# ═══════════════════════════════════════════════════════════════
+rapidocr>=1.3.0
+onnxruntime>=1.17.0
+pillow>=10.4.0
+opencv-python>=4.9.0
+numpy>=1.24.0,<2.0.0           # BẮT BUỘC khai báo tường minh
+
+# ═══════════════════════════════════════════════════════════════
+# Browser automation (MM88/RR88/XX88/O8/GG88)
+# ═══════════════════════════════════════════════════════════════
+playwright>=1.44.0
+# KHÔNG cần "playwright install" — bot chỉ kết nối Edge qua CDP,
+# không tự launch Chromium. Nhưng trên Linux server cần:
+#   playwright install-deps
+
+# ═══════════════════════════════════════════════════════════════
+# Tùy chọn — bật nếu code cần
+# ═══════════════════════════════════════════════════════════════
+# aiofiles>=23.2.0             # nếu media_download_manager.py import aiofiles
+# python-socks[asyncio]>=2.4.0 # nếu Telethon kết nối qua SOCKS5 proxy
